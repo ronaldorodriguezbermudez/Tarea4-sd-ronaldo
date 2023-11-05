@@ -38,7 +38,7 @@ export default {
                     },
                     body: JSON.stringify(this.formData),
                 });
-                con
+                
 
                 if (response.status === 200) {
                   console.log('Login exitoso'); 
