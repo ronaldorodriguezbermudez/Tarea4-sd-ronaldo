@@ -7,6 +7,6 @@ import './assets/css/skeleton.css';
 
 const app = createApp(App);
   
-app.config.globalProperties.url = 'https://backend-mongo.netlify.app';
+app.config.globalProperties.url = 'https://tarea4-sd-ronaldo.netlify.app';
 
 app.use(router).mount("#app");
