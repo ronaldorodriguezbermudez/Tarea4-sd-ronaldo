@@ -41,13 +41,13 @@ export default {
                 con
 
                 if (response.status === 200) {
+                  console.log('Login exitoso'); 
                     const data = await response.json();
                     // Guarda el token en una cookie en lugar de localStorage
                     document.cookie = `token=${data.token};path=/`;
                     this.$router.push("/home");
                 } else {
-                  console.log(response);
-                  console.log(this.formData);
+                  
                   console.error('Error de autenticación');
                 }
                 } catch (error) {
