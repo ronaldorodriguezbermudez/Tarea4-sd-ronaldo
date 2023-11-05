@@ -26,7 +26,7 @@ export default {
         async login(event){
             event.preventDefault();
             try {
-                const response = await fetch('https://tarea4-sd-ronaldo.netlify.app/.netlify/funtions/login', {
+                const response = await fetch('https://tarea4-sd-ronaldo.netlify.app/.netlify/functions/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
