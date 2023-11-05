@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="submitForm">
+    <form @submit="login">
       <h2>Login</h2>
       <div class="input-field">
         <input type="text" v-model="formData.username" placeholder="Enter Username">
