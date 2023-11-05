@@ -29,7 +29,7 @@ export default {
     methods: {
         async login(event){
             event.preventDefault();
-            
+
             try {
                 const response = await fetch('https://tarea4-sd-ronaldo.netlify.app/.netlify/functions/login', {
                     method: 'POST',
@@ -45,7 +45,11 @@ export default {
                     document.cookie = `token=${data.token};path=/`;
                     this.$router.push("/home");
                 } else {
-                    console.error('Error de autenticación');
+                  console.log(response);
+                  console.log(this.formData);
+                  console.log(this.formData.username);
+                  console.log(this.formData.password);
+                  console.error('Error de autenticación');
                 }
                 } catch (error) {
                     console.error(error);
