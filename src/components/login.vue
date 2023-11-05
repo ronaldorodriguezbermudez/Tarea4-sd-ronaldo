@@ -3,7 +3,7 @@
     <h2>Login</h2>
     <form @submit="login">
       <div class="form-group">
-        <input type="text" v-model="formData.username" placeholder="Enter Username">
+        <input type="text" v-model="formData.email" placeholder="Enter Email">
       </div>
       <div class="form-group">
         <input type="password" v-model="formData.password" placeholder="Enter Password">
@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       formData: {
-        username: "",
+        email: "",
         password: "",
       },
     };
@@ -38,7 +38,7 @@ export default {
                     },
                     body: JSON.stringify(this.formData),
                 });
-                console.log(response);
+                con
 
                 if (response.status === 200) {
                     const data = await response.json();
