@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "vue": "^3.2.16",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "jsonwebtoken": "latest",
+    "bcryptjs": "latest"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
