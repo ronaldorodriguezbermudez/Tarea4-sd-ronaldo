@@ -38,6 +38,7 @@ export default {
                     },
                     body: JSON.stringify(this.formData),
                 });
+                console.log(response);
 
                 if (response.status === 200) {
                     const data = await response.json();
@@ -47,8 +48,6 @@ export default {
                 } else {
                   console.log(response);
                   console.log(this.formData);
-                  console.log(this.formData.username);
-                  console.log(this.formData.password);
                   console.error('Error de autenticación');
                 }
                 } catch (error) {
