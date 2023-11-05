@@ -1,14 +1,18 @@
 <template>
+  <div class="container">
+    <h2>Login</h2>
     <form @submit="login">
-      <h2>Login</h2>
-      <div class="input-field">
+      <div class="form-group">
         <input type="text" v-model="formData.username" placeholder="Enter Username">
       </div>
-      <div class="input-field">
+      <div class="form-group">
         <input type="password" v-model="formData.password" placeholder="Enter Password">
       </div>
-      <input type="submit" value="LogIn">
+      <div class="form-group">
+        <button class="button button-primary" type="submit" > Login </button>
+      </div>
     </form>
+  </div>
   </template>
   
   <script>
@@ -25,6 +29,7 @@ export default {
     methods: {
         async login(event){
             event.preventDefault();
+            
             try {
                 const response = await fetch('https://tarea4-sd-ronaldo.netlify.app/.netlify/functions/login', {
                     method: 'POST',
